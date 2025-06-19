@@ -4,9 +4,7 @@ import edu.ucne.wilmercastillo_ap2_p2.data.remote.dto.RepositoryDto
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(
-    private val gitHubApi: GitHubApi
+    private val repositoryingApi: RepositoryingApi
 ) {
-    suspend fun getRepositories(username: String): List<RepositoryDto> {
-        return gitHubApi.listRepos(username)
-        }
+    suspend fun getRepository(username: String) = repositoryingApi.listRepos(username)
 }
