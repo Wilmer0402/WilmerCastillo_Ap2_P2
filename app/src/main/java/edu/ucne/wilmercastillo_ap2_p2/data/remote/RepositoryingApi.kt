@@ -4,7 +4,7 @@ import edu.ucne.wilmercastillo_ap2_p2.data.remote.dto.RepositoryDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface GitHubApi {
+interface RepositoryingApi {
     @GET("users/{username}/repos")
-    fun listRepos(@Path("username") username: String): List<RepositoryDto>
+   suspend fun listRepos(@Path("username") username: String): List<RepositoryDto>
 }
