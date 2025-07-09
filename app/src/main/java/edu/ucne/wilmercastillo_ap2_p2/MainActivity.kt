@@ -18,6 +18,7 @@ import edu.ucne.wilmercastillo_ap2_p2.ui.theme.WilmerCastillo_Ap2_P2Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContent {
             WilmerCastillo_Ap2_P2Theme {
