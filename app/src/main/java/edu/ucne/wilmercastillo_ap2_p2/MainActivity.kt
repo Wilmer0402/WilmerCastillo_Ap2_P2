@@ -11,29 +11,28 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import edu.ucne.wilmercastillo_ap2_p2.presentation.navigation.HomeNavHost
+import edu.ucne.alainagarcia_ap2_p2.presentation.navigation.HomeNavHost
 import edu.ucne.wilmercastillo_ap2_p2.ui.theme.WilmerCastillo_Ap2_P2Theme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         enableEdgeToEdge()
         setContent {
-            WilmerCastillo_Ap2_P2Theme {
-             val navigation = rememberNavController()
+           WilmerCastillo_Ap2_P2Theme {
+                val nav = rememberNavController()
                 Scaffold(
                     modifier = Modifier.fillMaxSize()
-                ){ innerPadding ->
+                ) { innerPadding ->
                     Box(
                         modifier = Modifier.padding(innerPadding)
-                    ){
-                        HomeNavHost(navigation)
+                    ) {
+                        HomeNavHost(nav)
                     }
-                }
+
                 }
             }
         }
     }
-
+}
