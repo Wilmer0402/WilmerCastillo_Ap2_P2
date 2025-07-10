@@ -7,4 +7,7 @@ class RemoteDataSource @Inject constructor(
     private val repositoryingApi: RepositoryingApi
 ) {
     suspend fun getRepository(username: String) = repositoryingApi.listRepos(username)
+
+    suspend fun getContributors(owner: String, repo: String) =
+        repositoryingApi.listContributors(owner, repo)
 }
